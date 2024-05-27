@@ -3,7 +3,6 @@ const Seller = require('../models/sellerModel');
 const Car = require('../models/carModel');
 const Brand = require('../models/brandModel');
 
-// Create a new brand
 exports.createBrand = async (req, res) => {
   try {
     const { name } = req.body;

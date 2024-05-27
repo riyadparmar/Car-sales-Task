@@ -8,10 +8,7 @@ router.post('/brands', createBrand);
 
 module.exports = router;
 
-
-// Assuming some kind of admin middleware for authentication
 const adminMiddleware = (req, res, next) => {
-  // Dummy admin check
   if (req.headers['x-admin'] === 'true') {
     next();
   } else {
@@ -19,6 +16,7 @@ const adminMiddleware = (req, res, next) => {
   }
 };
 
+// to get details about the users
 router.get('/stats', adminMiddleware, getAdminStats);
 
 module.exports = router;
